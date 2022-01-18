@@ -20,9 +20,9 @@ def sensors():
     # return jsonify(boto_dynamo.get_items())
     # return boto_dynamo.get_items()
     temps = boto_dynamo.get_items()
-    item = temps[0]
-    print(item['temp'])
-    return render_template("sensors.html", data=temps)
+    last_item = temps[-1]
+    print(last_item)
+    return render_template("sensors.html", data=temps, last=last_item)
 
 
 if __name__ == "__main__":

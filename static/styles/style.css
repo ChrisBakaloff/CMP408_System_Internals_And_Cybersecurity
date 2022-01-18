@@ -1,3 +1,16 @@
 h6{
     color: rebeccapurple;
 }
+
+.main_temp{
+    color: rebeccapurple;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+.main_temp_jumbo{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}

@@ -7,28 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    {% extends "template.html"%}
-    {% block content %}
+{% extends "template.html" %}
+{% block content %}
+
+        <div class="jumbotron jumbotron-fluid main_temp_jumbo">
+            <div class="container main_temp" >
+                <h2>Last Measured Temperature: {{ last['temp'] }}</h2>
+                <h4>Using: Raspberry Pi Zero W and DS18B20 sensor </h4>
+            </div>
+        </div>
 
 
-{#                <div class="row">#}
-{#                    <div class="col-sm">#}
-{#                        <h7>Raspberry Pi DS18B20 Temp Sensor</h7>#}
-{#                    </div>#}
-{#                    <div class="col-sm">#}
-{#                        <h1 class="display-4" style="text-align: center;">22C</h1>#}
-{#                        {% for element in data %}#}
-{#                            <h7>{{ element }}</h7>#}
-{#                        {% endfor %}#}
-{#                    </div>#}
-                    {% for element in data %}
-                        <div class="container" style="text-align: center">
-                            <h6>{{ element['temp'] }} <strong>°C</strong></h6>
-                            <p>{{ element['date'] }} at {{ element['time'] }}</p>
-                        </div>
-                    {% endfor %}
 
-
-    {% endblock %}
+    {% for element in data %}
+        <div class="container" style="text-align: center">
+            <h6>{{ element['temp'] }} <strong>°C</strong></h6>
+            <p>{{ element['date'] }} at {{ element['time'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
 </body>
 </html>
